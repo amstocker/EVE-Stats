@@ -1,0 +1,340 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+   
+body {
+	background: #ddd;
+}
+
+#content {
+	width: 1100px;
+	margin: auto;
+	padding-bottom: 12px;
+	background-color: #eee;
+	
+	font-family: 'Inconsolata';
+	color: #111;
+}
+
+a.nolink:link, a.nolink:visited, a.nolink:hover, a.nolink:active {
+    text-decoration: none;
+}
+
+.blue {
+	color: #06f;
+}
+
+.red {
+	color: #f00;
+}
+
+/* TITLE */
+
+#topbar {
+	background-image: url('/img/bg2.png');
+	padding: 12px;
+}
+
+#title {
+	background-color: transparent;
+	
+	font-family: 'Roboto';
+	font-size: 3em;
+	text-align: center;
+	color: #111;
+	
+	border: 1px solid #111;
+	padding: 0px 12px 0px;
+	
+	margin: auto;
+	width: 260px;
+	
+	-webkit-user-select: none;
+}
+
+#title:hover{
+	color: #f30;
+	border-color: #f30;
+}
+
+
+/* MENU */
+
+#menubar {
+	background-color: #fff;
+	padding: 4px;
+	height: 22px;
+}
+
+#searchform {
+	float: right;
+}
+
+button, input, select, textarea {
+	font-family: 'Inconsolata';
+	font-size: 1em;
+	color: #111;
+	background: transparent;
+}
+
+input[type=search] {
+	border: 1px dotted #111;
+	border-radius: 0;
+
+	-webkit-appearance: none;
+}
+
+input[type=submit] {
+	border: 1px solid #111;
+	border-radius: 0;
+	
+	-webkit-appearance: none;
+}
+
+input[type=search]:focus {
+	outline: none;
+	border-color: #f30;
+}
+
+input[type=submit]:hover {
+	outline: none;
+	border-color: #f30;
+	color: #f30;
+}
+
+/* BODY */
+
+#stats {
+	background-color: #fff;
+	
+	margin: 12px;
+	padding: 8px;
+}
+
+#table div {
+	margin: 8px;
+	padding: 4px;
+}
+
+#table > div {
+	border: 1px dotted #111;
+}
+
+/* FOOTER */
+
+#footer {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
