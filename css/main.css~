@@ -139,7 +139,7 @@ a {
 /* TITLE */
 
 #topbar {
-	/* background-image: url('/img/bg2.png'); */
+	background-image: url('/img/bg2.png');
 	padding: 12px;
 }
 
@@ -212,10 +212,6 @@ input[type=submit]:hover {
 
 /* BODY */
 
-#subtitle {
-	font-size: 1.5em;
-}
-
 #stats {
 	background-color: #fff;
 	
@@ -232,22 +228,10 @@ input[type=submit]:hover {
 	border: 1px dotted #111;
 }
 
-/* STATS TABLES */
-
-#tablecontainer > table {
-	border: 1px solid #ddd;
-	display: inline-block;
+#canvas {
+	margin: 4px;
+	height: 400px;
 }
-
-table, th, td {
-	padding: 4px;
-}
-
-table {
-	margin: 8px;
-}
-
-td {width: auto;}
 
 /* RECENT KILLS LIST */
 #recentKills > div {

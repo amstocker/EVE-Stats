@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <script src="js/vendor/numeral.min.js"></script>
+        <script src="js/vendor/Chart.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools.js"></script>
 		
         <script src="js/main.js"></script>
@@ -45,13 +45,12 @@
 			</div>
 			
 			<div id="stats">
-				<center><div><span id="subtitle"></span></div>
+				<div><span id="subtitle"></span></div>
 				<div id="loading", style="display: block;">
 					Loading<span class="one">.</span><span class="two">.</span><span class="three">.</span>
-				</div></center>
-
-				<div id="table">
 				</div>
+				
+				<div id="table"></div>
 			</div>
 			
 			<div id="footer">
