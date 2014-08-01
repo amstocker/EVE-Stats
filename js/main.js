@@ -103,13 +103,15 @@ window.addEvent('domready', function() {
 		var active_systems = {};
 		
 		var inlineDivStyle = {'display': 'inline',
+							  'float':'right',
 							  'padding': '0',
 							  'color': '#bbb',
-							  'border': 'none'};
+							  'border': 'none',
+							  'margin': '0px 8px 0px'};
 
 		var recentKills = new Element('div', {id: 'recentKills'});
 		recentKills.grab( new Element('b', {html: 'recent kills:'}) );
-		recentKills.grab( new Element('div', {styles: Object.append(inlineDivStyle, {'float':'right', 'margin': '0px 8px 0px'}), html: 'corporation \\\\ alliance'}) );
+		recentKills.grab( new Element('div', {styles: inlineDivStyle, html: 'corporation \\\\ alliance'}) );
 		
 		response['kills'].each( function(kill) {
 			var row = new Element('div', {styles: {'padding':'0px'}});
@@ -177,6 +179,7 @@ window.addEvent('domready', function() {
 				if (info.getStyle('display')=='none') {
 					info.setStyle('display', 'block');
 				} else {
+					/* add ajax req here from func attached to window, also show window.loadinganim */
 					info.setStyle('display', 'none');
 				};
 			});
@@ -225,21 +228,6 @@ window.addEvent('domready', function() {
 	
 	
 	(function () {
-		var xhr = new XMLHttpRequest();
-		xhr.onload = function() {
-			if (xhr.status == 200) {
-				window.ITEM_LOOKUP = {};
-				
-				var typeids = xhr.responseText.split(/\n/g);
-				typeids.each( function(line) {
-					line = line.split(/[^\S\r\n]{2,}/);
-					var item_id = line[0], item_name = line[1];
-					ITEM_LOOKUP[item_id] = item_name;
-				});
-			};
-		};
-		xhr.open('GET', '/js/typeid.txt')
-		xhr.send()
 		searchRequest();
 	})();
 	
